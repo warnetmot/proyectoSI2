@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ClienteController;
+use App\Http\Controllers\ArtistaController;
+use App\Http\Controllers\ReservaController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +24,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::resource('Clientes', ClienteController::class);
+Route::resource('Artistas', ArtistaController::class);
+Route::resource('Reservas', ReservaController::class);
+
