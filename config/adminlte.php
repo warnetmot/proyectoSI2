@@ -354,6 +354,11 @@ return [
             'url'  => 'Reservas', 
             'icon' => 'fas fa-fw fa-users', 
         ],
+        [
+            'text' => 'CHAT',
+            'url'  => '/chatbot',
+            'icon' => 'fas fa-fw fa-comments',
+        ],
         
         
       

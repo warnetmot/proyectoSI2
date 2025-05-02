@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\ArtistaController;
 use App\Http\Controllers\ReservaController;
+use App\Http\Controllers\ChatbotController;
 
 
 /*
@@ -28,3 +29,7 @@ Route::resource('Clientes', ClienteController::class);
 Route::resource('Artistas', ArtistaController::class);
 Route::resource('Reservas', ReservaController::class);
 
+Route::post('/chatbot/respond', [ChatbotController::class, 'respond'])->name('admin.chatbot.respond');
+Route::get('/chatbot', function () {
+    return view('admin.chatbot');
+})->name('admin.chatbot');
