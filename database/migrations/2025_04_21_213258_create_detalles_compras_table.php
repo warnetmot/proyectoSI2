@@ -9,7 +9,7 @@ class CreateDetallesComprasTable extends Migration
     public function up()
     {
         Schema::create('detalles_compras', function (Blueprint $table) {
-            $table->id('id_detalle'); 
+            $table->id('id_detalle')->autoIncrement()->unicade(); 
 
             $table->unsignedBigInteger('id_compra');
             $table->unsignedBigInteger('id_producto');

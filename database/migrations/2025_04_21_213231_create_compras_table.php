@@ -9,16 +9,15 @@ class CreateComprasTable extends Migration
     public function up()
     {
         Schema::create('compras', function (Blueprint $table) {
-            $table->id('id_compra'); // PK
+            $table->id('id_compra')->autoIncrement()->unicade();
 
-            $table->unsignedBigInteger('id_proveedor'); // FK
+            $table->unsignedBigInteger('id_proveedor');
 
             $table->date('fecha_compra');
             $table->decimal('total', 10, 2);
 
             $table->timestamps();
 
-            // Relación con proveedores
             $table->foreign('id_proveedor')->references('id_proveedor')->on('proveedores')->onDelete('cascade');
         });
     }

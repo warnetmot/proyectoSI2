@@ -9,7 +9,7 @@ class CreateVentasTable extends Migration
     public function up()
     {
         Schema::create('ventas', function (Blueprint $table) {
-            $table->id('id_venta'); 
+            $table->id('id_venta')->autoIncrement()->unicade(); 
             
             $table->unsignedBigInteger('id_cliente');
 

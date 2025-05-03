@@ -4,6 +4,11 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\ArtistaController;
 use App\Http\Controllers\ReservaController;
+use App\Http\Controllers\ProductoController;
+use App\Http\Controllers\ProveedorController;
+use App\Http\Controllers\CompraController;
+use App\Http\Controllers\DetalleCompraController;
+use Illuminate\Support\Facades\Auth;
 
 
 /*
@@ -27,4 +32,8 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::resource('Clientes', ClienteController::class);
 Route::resource('Artistas', ArtistaController::class);
 Route::resource('Reservas', ReservaController::class);
+Route::resource('Productos', ProductoController::class);
+Route::resource('Proveedores', ProveedorController::class);
+Route::resource('Compras', CompraController::class);
+Route::resource('DetallesCompras', DetalleCompraController::class);
 

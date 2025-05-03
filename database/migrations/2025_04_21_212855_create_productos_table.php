@@ -9,14 +9,14 @@ class CreateProductosTable extends Migration
     public function up()
     {
         Schema::create('productos', function (Blueprint $table) {
-            $table->id('id_producto'); 
+            $table->id()->autoIncrement()->unicade();
             $table->string('nombre');
             $table->text('descripcion')->nullable();
             $table->decimal('precio_unitario', 8, 2);
             $table->integer('stock')->default(0);
-            $table->enum('categoria', ['tintas', 'agujas', 'aftercare', 'otros'])->default('otros');
+            $table->string('categoria');
 
-            $table->timestamps(); 
+            $table->timestamps();
         });
     }
 

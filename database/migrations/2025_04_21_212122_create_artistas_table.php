@@ -9,7 +9,7 @@ class CreateArtistasTable extends Migration
     public function up()
     {
         Schema::create('artistas', function (Blueprint $table) {
-            $table->id('id_artista'); 
+            $table->id('id_artista')->autoIncrement()->unicade(); 
             $table->string('nombre');
             $table->string('apellido');
             $table->string('especialidad');
