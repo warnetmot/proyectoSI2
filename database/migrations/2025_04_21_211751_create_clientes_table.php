@@ -9,7 +9,7 @@ class CreateClientesTable extends Migration
     public function up()
     {
         Schema::create('clientes', function (Blueprint $table) {
-            $table->id('id_cliente'); 
+            $table->id('id_cliente')->autoIncrement()->unicade(); 
             $table->string('nombre');
             $table->string('apellido');
             $table->text('dni')->unique();// se coloco en tipo text para su guardado encriptado

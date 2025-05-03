@@ -9,7 +9,7 @@ class CreateSesionesTable extends Migration
     public function up()
     {
         Schema::create('sesiones', function (Blueprint $table) {
-            $table->id('id_sesion'); 
+            $table->id('id_sesion')->autoIncrement()->unicade(); 
 
             $table->unsignedBigInteger('id_reserva');
 

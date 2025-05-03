@@ -9,7 +9,7 @@ class CreateProveedoresTable extends Migration
     public function up()
     {
         Schema::create('proveedores', function (Blueprint $table) {
-            $table->id('id_proveedor'); 
+            $table->id('id_proveedor')->autoIncrement()->unicade(); 
 
             $table->string('nombre');
             $table->string('email')->nullable();

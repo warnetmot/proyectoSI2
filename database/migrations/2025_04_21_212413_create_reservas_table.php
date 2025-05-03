@@ -9,7 +9,7 @@ class CreateReservasTable extends Migration
     public function up()
     {
         Schema::create('reservas', function (Blueprint $table) {
-            $table->id('id_reserva'); 
+            $table->id('id_reserva')->autoIncrement()->unicade(); 
        
             $table->unsignedBigInteger('id_cliente');
             $table->unsignedBigInteger('id_artista');

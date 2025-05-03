@@ -311,7 +311,7 @@ return [
         ],
 
         // Sidebar items:
-        
+
         [
             'type' => 'sidebar-menu-search',
             'text' => 'Buscar',
@@ -341,18 +341,43 @@ return [
         ],
         [
             'text' => 'Clientes',
-            'url'  => 'Clientes', 
-            'icon' => 'fas fa-fw fa-users', 
+            'url'  => 'Clientes',
+            'icon' => 'fas fa-fw fa-users',
         ],
         [
             'text' => 'Artistas',
-            'url'  => 'Artistas', 
-            'icon' => 'fas fa-fw fa-users', 
+            'url'  => 'Artistas',
+            'icon' => 'fas fa-fw fa-users',
         ],
         [
             'text' => 'Reservas',
-            'url'  => 'Reservas', 
-            'icon' => 'fas fa-fw fa-users', 
+            'url'  => 'Reservas',
+            'icon' => 'fas fa-fw fa-users',
+        ],
+        [
+            'text' => 'Productos',
+            'url'  => 'Productos',
+            'icon' => 'fas fa-fw fa-users',
+        ],
+        [
+            'text' => 'Proveedores',
+            'url'  => 'Proveedores',
+            'icon' => 'fas fa-fw fa-users',
+        ],
+        [
+            'text' => 'Compras',
+            'url'  => 'Compras',
+            'icon' => 'fas fa-fw fa-users',
+        ],
+        [
+            'text' => 'Detalles Compras',
+            'url'  => 'DetallesCompras',
+            'icon' => 'fas fa-fw fa-users',
+        ],
+        [
+            'text' => 'Salir',
+            'url'  => 'logout',
+            'icon' => 'fas fa-fw fa-sign-out-alt',
         ],
         [
             'text' => 'CHAT',
@@ -360,8 +385,9 @@ return [
             'icon' => 'fas fa-fw fa-comments',
         ],
         
-        
-      
+
+
+
     ],
 
     /*
