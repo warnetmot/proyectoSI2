@@ -5,10 +5,16 @@
 @stop
 @section('content')
 <style>
+
     body {
         background-color: #f8f9fa !important;
     }
 </style>
+<div class="mb-3">
+    <a href="{{ route('reporte.pdf') }}" class="btn btn-danger">
+        <i class="fas fa-file-pdf"></i> Descargar PDF
+    </a>
+</div>
 <div class="table-responsive">
     <table id="detalle-compra" class="table table-bordered table-striped">
         <thead class="thead-dark">

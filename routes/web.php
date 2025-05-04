@@ -11,6 +11,7 @@ use App\Http\Controllers\CompraController;
 use App\Http\Controllers\DetalleCompraController;
 use App\Http\Controllers\DetalleVentaController;
 use App\Http\Controllers\VentaController;
+use App\Http\Controllers\PDFController;
 
 use Illuminate\Support\Facades\Auth;
 
@@ -43,8 +44,9 @@ Route::resource('DetallesCompras', DetalleCompraController::class);
 Route::resource('DetallesVentas', DetalleVentaController::class);
 Route::resource('Ventas', VentaController::class);
 
-
 Route::post('/chatbot/respond', [ChatbotController::class, 'respond'])->name('admin.chatbot.respond');
 Route::get('/chatbot', function () {
     return view('admin.chatbot');
 })->name('admin.chatbot');
+
+Route::get('/reporte/pdf', [PDFController::class, 'generarPDF'])->name('reporte.pdf');

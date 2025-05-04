@@ -7,8 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Producto extends Model
 {
-    use HasFactory;
     protected $primaryKey = 'id_producto';
+    use HasFactory;
     protected $fillable = [
         'nombre',
         'descripcion',
@@ -26,4 +26,3 @@ class Producto extends Model
         return $this->hasMany(Compra::class, 'id_producto');
     }
 }
-  

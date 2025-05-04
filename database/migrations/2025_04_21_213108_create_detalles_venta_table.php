@@ -7,8 +7,8 @@ class CreateDetallesVentaTable extends Migration
 {
     public function up()
     {
-        Schema::create('detalle_ventas', function (Blueprint $table) {
-            $table->id('id_detalle')->autoIncrement()->unicade(); 
+        Schema::create('detalles_venta', function (Blueprint $table) {
+            $table->id('id_detalle')->autoIncrement()->unicade();
 
             $table->unsignedBigInteger('id_venta');
             $table->unsignedBigInteger('id_producto');
@@ -28,3 +28,5 @@ class CreateDetallesVentaTable extends Migration
         Schema::dropIfExists('detalles_venta');
     }
 }
+
+

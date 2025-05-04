@@ -43,7 +43,7 @@ class ClienteController extends Controller
 
         return redirect()->route("Clientes.index")->with('success', 'el cliente fue modificado correctamente ');
     }
-    public function destroy(Product $product)
+    public function destroy($id_cliente)
     {
         try {
             $cliente = Cliente::findOrFail($id_cliente);

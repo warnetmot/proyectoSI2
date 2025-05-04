@@ -9,11 +9,11 @@ class Venta extends Model
     protected $primaryKey = 'id_venta';
     protected $fillable = [
         'id_cliente',
-        'fecha_venta' => 'datetime',
+        'fecha_venta',
         'total',
         'metodo_pago'
     ];
-    
+
     public function cliente()
     {
         return $this->belongsTo(Cliente::class, 'id_cliente');
