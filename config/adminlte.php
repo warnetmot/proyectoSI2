@@ -384,6 +384,16 @@ return [
             'url'  => '/chatbot',
             'icon' => 'fas fa-fw fa-comments',
         ],
+        [
+            'text' => 'Ventas',
+            'url'  => 'Ventas',
+            'icon' => 'fas fa-fw fa-comments',
+        ],
+        [
+            'text' => 'Detalle Venta',
+            'url'  => 'DetallesVentas',
+            'icon' => 'fas fa-fw fa-comments',
+        ],
         
 
 

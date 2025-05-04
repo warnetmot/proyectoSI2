@@ -9,6 +9,9 @@ use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\ProveedorController;
 use App\Http\Controllers\CompraController;
 use App\Http\Controllers\DetalleCompraController;
+use App\Http\Controllers\DetalleVentaController;
+use App\Http\Controllers\VentaController;
+
 use Illuminate\Support\Facades\Auth;
 
 
@@ -37,6 +40,9 @@ Route::resource('Productos', ProductoController::class);
 Route::resource('Proveedores', ProveedorController::class);
 Route::resource('Compras', CompraController::class);
 Route::resource('DetallesCompras', DetalleCompraController::class);
+Route::resource('DetallesVentas', DetalleVentaController::class);
+Route::resource('Ventas', VentaController::class);
+
 
 Route::post('/chatbot/respond', [ChatbotController::class, 'respond'])->name('admin.chatbot.respond');
 Route::get('/chatbot', function () {

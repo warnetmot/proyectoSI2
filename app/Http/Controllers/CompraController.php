@@ -54,7 +54,7 @@ class CompraController extends Controller
         ]);
         DetalleCompra::create([
             'id_compra' => $compra->id_compra, 
-            'id_producto' => $producto->id,
+            'id_producto' => $producto->id_producto,
             'cantidad' => $request->stock,
             'precio_unitario' => $request->precio_unitario,
         ]);

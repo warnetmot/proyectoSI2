@@ -24,17 +24,16 @@ class DetalleCompraController extends Controller
         $productos = Producto::all();
 
         // Retornar la vista con los productos y el ID de la compra
-        return view('DetallesCompras.create', compact('productos', 'id_compra'));
+        return view('DetallesCompras.create', compact('id_producto', 'id_compra'));
     }
 
-    public function store(Request $request)
+    public function store(Request $request,  $id_compra)
     {
         // Validar los datos del formulario
         $request->validate([
-            'id_compra' => 'required|exists:compras,id_compra',
-            'id_producto' => 'required|exists:productos,id',
+            'id_producto' => 'required|exists:productos,id_producto', // Cambiado a id_producto
             'cantidad' => 'required|integer|min:1',
-            'precio_unitario' => 'required|numeric|min:0',
+            'precio_unitario' => 'required|numeric|min:0.01',
         ]);
 
         // Crear el detalle de la compra

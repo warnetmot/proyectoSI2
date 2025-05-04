@@ -7,7 +7,7 @@ class CreateDetallesVentaTable extends Migration
 {
     public function up()
     {
-        Schema::create('detalles_venta', function (Blueprint $table) {
+        Schema::create('detalle_ventas', function (Blueprint $table) {
             $table->id('id_detalle')->autoIncrement()->unicade(); 
 
             $table->unsignedBigInteger('id_venta');
